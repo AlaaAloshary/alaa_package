@@ -27,8 +27,15 @@ class AlaaStyle
     _darkStyle=darkStyle;
   }
 
-
-  static ThemeData setStyleAndGetTheme(AlaaStyle newStyle,dynamic value,{dynamic darkValue})
+static getTheme( dynamic value)=>  ThemeDecoder.decodeThemeData(
+  value,
+  validate: true,
+  ) ??
+  ThemeData(
+  scaffoldBackgroundColor: _style.accentColor,
+  colorScheme: ColorScheme.fromSeed(seedColor: _style.mainColor)
+  );
+  static ThemeData setStyleAndGetTheme(AlaaStyle newStyle,dynamic value)
   {_style = newStyle;
   
       return ThemeDecoder.decodeThemeData(
