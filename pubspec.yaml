@@ -12,7 +12,9 @@ dependencies:
     sdk: flutter
   get:
   json_theme:
-    path: 'Packages/json_theme'
+    path: 'Packages2/json_theme'
+#  json_theme:
+#    git: https://github.com/AlaaAloshary/alaa_package/Packages/json_theme
 dev_dependencies:
   flutter_test:
     sdk: flutter
