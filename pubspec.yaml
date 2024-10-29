@@ -10,7 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  get:
+  json_theme:
+    path: 'Packages/json_theme'
 dev_dependencies:
   flutter_test:
     sdk: flutter

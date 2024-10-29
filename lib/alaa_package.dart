@@ -1,7 +1,8 @@
 library alaa_package;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'StyleClasses/AlaaStyle.dart';
+export 'StyleClasses/AlaaMaterialColor.dart';
+export 'package:json_theme/json_theme.dart';
+export 'package:json_class/json_class.dart';
+export 'package:json_schema/json_schema.dart';
+export 'package:json_theme_annotation/json_theme_annotation.dart';
