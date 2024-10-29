@@ -26,7 +26,10 @@ class AlaaStyle
     _style = newStyle;
     _darkStyle=darkStyle;
   }
-  static ThemeData setStyleAndGetTheme(AlaaStyle newStyle,dynamic value) {_style = newStyle;
+
+
+  static ThemeData setStyleAndGetTheme(AlaaStyle newStyle,dynamic value,{dynamic darkValue})
+  {_style = newStyle;
   
       return ThemeDecoder.decodeThemeData(
         value,
@@ -38,6 +41,7 @@ class AlaaStyle
           );
     
   }
+
  final  MaterialColor mainColor;
  final  MaterialColor secondaryColor;
  final  MaterialColor accentColor;
