@@ -174,7 +174,8 @@ factory AlaaStyle.defaultStyle(){
     BoxDecoration boxDecoration=BoxDecoration(
         border: border,
         borderRadius:borderRadius?? borderRadiusAll(radius: radius??defaultRadius),
-        color:color?? (SchedulerBinding.instance.platformDispatcher.platformBrightness==Brightness.dark?Colors.black87:Colors.white),
+        color:color?? (Theme.of(Get.context!).brightness==Brightness.dark?Colors.black87:Colors.white),
+        // color:color?? (SchedulerBinding.instance.platformDispatcher.platformBrightness==Brightness.dark?Colors.black87:Colors.white),
         boxShadow:boxShadow?? [
           BoxShadow(
               color: Colors.black45,
