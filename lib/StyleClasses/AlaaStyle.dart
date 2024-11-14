@@ -148,7 +148,7 @@ factory AlaaStyle.defaultStyle(){
     return TextStyle(
         fontFamily: fontFamily,
         color: color ,
-        fontSize: size??40,
+        fontSize: size??14,
         fontWeight: fontWeight,
         shadows:shadows,
         decoration:decoration//  TextDecoration.lineThrough
