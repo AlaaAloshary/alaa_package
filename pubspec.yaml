@@ -13,6 +13,7 @@ dependencies:
   get:
   json_theme:
     path: 'Packages2/json_theme'
+  awesome_snackbar_content:
 #  json_theme:
 #    git: https://github.com/AlaaAloshary/alaa_package/Packages/json_theme
 dev_dependencies:

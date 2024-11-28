@@ -1,5 +1,6 @@
 
 import 'package:alaa_package/alaa_package.dart';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
@@ -132,6 +133,7 @@ factory AlaaStyle.defaultStyle(){
       }
       icon=Icon(iconData);
     }
+  //  Get.showSnackbar(snackbar)
     Get.snackbar(title, message,duration: duration??const Duration(seconds: 5),
         titleText:Text(title,textAlign: TextAlign.center,
           textDirection:TextDirection.rtl,style: textStyle(fontWeight: FontWeight.bold),),
@@ -139,6 +141,20 @@ factory AlaaStyle.defaultStyle(){
           textDirection:TextDirection.rtl,),icon:icon,snackStyle:SnackStyle.FLOATING,
         forwardAnimationCurve: Curves.fastLinearToSlowEaseIn,onTap:onTap );
     await Future.delayed(duration??const Duration(seconds: 5));
+    return;
+
+  }
+  Future msgDialogV2({String? title, String? message,ContentType? content,
+    Duration? duration,OnTap? onTap,SnackPosition position=SnackPosition.TOP})async
+  {
+    Get.closeAllSnackbars();
+    Get.showSnackbar(GetSnackBar(messageText:AwesomeSnackbarContent(
+      title: title??"",
+      message:message??"",
+      contentType:content?? ContentType.success,
+
+    ) ,backgroundColor:transparent,duration:duration?? 5.seconds,snackPosition:position,onTap: onTap,));
+
     return;
 
   }
